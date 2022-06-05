@@ -54,7 +54,8 @@ function enable() {
     log('----------------');
 
     z = new SomeRandomWidget();
-    global.stage.add_child(z);
+    // global.stage.add_child(z);
+    Main.layoutManager.addChrome(z);
 
     // let t = GLib.timeout_add(GLib.PRIORITY_DEFAULT, 1000, () => {
     //     x.reactive = true;
