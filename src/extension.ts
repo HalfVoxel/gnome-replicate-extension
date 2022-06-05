@@ -32,6 +32,11 @@ class SomeRandomWidget extends St.Widget {
             log("Destroying SomeRandomWidget");
         });
     }
+
+    override destroy() {
+        super.destroy();
+        log("Destroying SomeRandomWidget");
+    }
 }
 
 // eslint-disable-next-line no-unused-vars
@@ -82,8 +87,9 @@ function disable() {
     log('DISABLE EXTENSION');
     log('-----------------');
 
-    log(`\nREMOVING DESTROY SIGNAL ${destroySignal}\n`)
-    z.disconnect(destroySignal);
+    // log(`\nREMOVING DESTROY SIGNAL ${destroySignal}\n`)
+    // z.disconnect(destroySignal);
+    z.destroy();
 
     log('---------------------');
     log('END DISABLE EXTENSION');
