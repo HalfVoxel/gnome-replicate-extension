@@ -28,9 +28,9 @@ class SomeRandomWidget extends St.Widget {
     constructor() {
         super();
         log("Created new SomeRandomWidget");
-        this.connect('destroy', () => {
-            log("Destroying SomeRandomWidget");
-        });
+        // this.connect('destroy', () => {
+        //     log("Destroying SomeRandomWidget");
+        // });
     }
 
     override destroy() {
